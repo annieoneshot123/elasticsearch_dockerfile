@@ -1,0 +1,12 @@
+cluster:
+  name: elasticsearch
+network:
+  host: 0.0.0.0
+node:
+  name: ${HOSTNAME}
+discovery:
+  zen.ping.unicast.hosts: ${ES_CLUSTER_SERVICE}
+  zen.minimum_master_nodes: ${NODE_QUORUM}
+path:
+  data: /elasticsearch/persistent/elasticsearch/data
+  logs: /elasticsearch/logs
